@@ -1,41 +1,24 @@
 ﻿<!DOCTYPE html>
 
-<style>
-    body {
-        background: black;
-    }
-    aside {
-        float: left;
-        color: white;
-    }
-    p {
-        letter-spacing: 0.3em;
-        line-height: 1.5;
-    }
-    h1 {
-        color: white;
-        line-height: 0;
-    }
-
-</style>
-
 <html>
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="mandelbrot.js" defer></script>
+    <script type="module" src="src/index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
-    <h1>Mandelbrot - Judds</h1>
+    <h1>Mandelbrot 2 - Judds</h1>
     <p></p>
+    <canvas></canvas><br>
     <aside>
-        Resolution<input title="Self explanatory" onclick="doThing()" type="range" min="12" max="100" />
-        Depth<input title="Affects precision" id="depth" onclick="iterations()" type="range" min="5" max="80" />
-        <button onclick="zoom(-1)">Zoom in</button>
-        <button onclick="zoom(1)">Zoom out</button>
-        <button onclick="resetZoom()">Reset</button>
+        Resolution<input title="Self explanatory" type="range" min="10" max="900" />
+        Depth<input title="Affects precision" id="depth" type="range" min="5" max="80" />
+        <button id="zoomIn">Zoom in</button>
+        <button id="zoomOut">Zoom out</button>
+        <button id="reset">Reset</button>
     </aside>
 
 </body>
